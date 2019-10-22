@@ -1,0 +1,10 @@
+*.json
+*.exe
+*.cbp
+*.depend
+*.layout
+*.o
+**/bin
+**/main.cpp
+.vscode
+vscode/**
