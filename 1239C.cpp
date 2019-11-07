@@ -25,9 +25,10 @@ int main() {
     }
     sort(array.begin(), array.end());
 
-    long long cur = array[0].first;
+    long long cur = 0;
     int idx = 0, cnt = 0;
     while(cnt < n) {
+        if (q.empty() && pq.empty()) cur = array[idx].first; // Neu ma khong con thang nao doi rot nuoc | thi thoi gian tinh cho thang tiep theo di lay nuocgp
         while(idx < n && array[idx].first <= cur + p) {
             // Tim nhung nguoi se available cho lan rot nuoc tiep theo
             if (q.empty() || q.back() > array[idx].second) {
@@ -41,7 +42,7 @@ int main() {
                 // Nen may thang sau nay phai uu tien thang co stt nho nhat
                 pq.push(array[idx++].second);
             }
-        }
+        }u
         // Set the result
         cur += p;
         result[q.front()] = cur;
