@@ -42,7 +42,7 @@ int main() {
                 // Nen may thang sau nay phai uu tien thang co stt nho nhat
                 pq.push(array[idx++].second);
             }
-        }u
+        }
         // Set the result
         cur += p;
         result[q.front()] = cur;
